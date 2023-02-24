@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class student
+{
+    String name;
+    int reg_no;
+    
+    student(String a,int b)
+    {
+        this.name = a;
+        this.reg_no = b;
+    }
+    void display()
+    {
+        System.out.println(name+","+reg_no);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String name1 = "null";
+        int reg = 0;
+        student obj = new student(name1,reg);
+        int x = in.nextInt();
+        if(x == 1)
+        {
+            name1 = in.next();
+            while(reg<=0)
+            {
+                reg = in.nextInt();
+            }
+            obj.name = name1;
+            obj.reg_no = reg;
+            obj.display();
+        }
+        else if(x == 2)
+        {
+            obj.display();
+        }
+        else
+        {
+            System.out.println("Wrong Choice");
+        }
+    }
+}
